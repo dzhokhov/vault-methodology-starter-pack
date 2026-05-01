@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Gates"
+  short_description: "Run quality gates and return a strict gate report"
+  default_prompt: "Run all required quality gates for this change and produce an overall GREEN/YELLOW/RED status."

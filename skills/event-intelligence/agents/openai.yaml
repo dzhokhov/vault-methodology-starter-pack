@@ -1,0 +1,4 @@
+interface:
+  display_name: "Event Intelligence"
+  short_description: "Track and score AI events for attend and speak"
+  default_prompt: "Use $event-intelligence to score upcoming AI events for Attend and Speak."

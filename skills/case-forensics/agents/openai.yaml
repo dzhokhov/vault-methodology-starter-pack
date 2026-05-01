@@ -1,0 +1,4 @@
+interface:
+  display_name: "Case Forensics"
+  short_description: "Extract reproducible AI implementation cases"
+  default_prompt: "Use $case-forensics to extract a reproducible case from this thread."

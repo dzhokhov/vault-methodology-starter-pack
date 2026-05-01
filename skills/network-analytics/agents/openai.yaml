@@ -1,0 +1,4 @@
+interface:
+  display_name: "Network Analytics"
+  short_description: "Map AI industry graph and outreach priorities"
+  default_prompt: "Use $network-analytics to update the industry graph and suggest outreach."

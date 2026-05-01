@@ -1,0 +1,4 @@
+interface:
+  display_name: "New Dialog Handoff"
+  short_description: "Park state and prepare a compact restart packet for a fresh chat"
+  default_prompt: "Prepare a safe handoff into a new dialog: persist state, reuse parking/resume, and return a short restart packet."

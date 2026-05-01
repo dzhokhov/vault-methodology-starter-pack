@@ -1,0 +1,4 @@
+interface:
+  display_name: "Owner-Only Dev Orchestrator"
+  short_description: "Run full owner-only dev workflow with GREEN/YELLOW/RED output"
+  default_prompt: "Orchestrate this development task end-to-end with minimal owner involvement and strict self-verification."

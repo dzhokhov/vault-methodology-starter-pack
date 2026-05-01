@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translation and Editorial"
+  short_description: "Turn technical AI updates into practical content"
+  default_prompt: "Use $translation-editorial to rewrite AI signals into clear business-ready cards."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release & Rollback"
+  short_description: "Validate release readiness and enforce rollback safety"
+  default_prompt: "Assess release readiness, confirm rollback path, and return a release decision packet."

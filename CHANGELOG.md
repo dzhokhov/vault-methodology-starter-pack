@@ -4,6 +4,17 @@ All notable public changes are tracked here.
 
 This project uses early semantic versions. Until `v1.0.0`, breaking changes to structure or rules may happen when they make the starter pack clearer or safer.
 
+## [v0.1.2] - 2026-05-02
+
+### Changed
+
+- Restored this repository as the Russian-first version after creating the separate English repository `dzhokhov/markdown-agent-vault`.
+- Restored the root README and quickstart to Russian.
+
+### Removed
+
+- Removed transitional English entry files from this repository: `AGENTS.en.md`, `START_HERE.en.md`, `ONBOARDING.en.md`.
+
 ## [v0.1.1] - 2026-05-02
 
 ### Added

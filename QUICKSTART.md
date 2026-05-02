@@ -1,78 +1,78 @@
-# Quickstart
+# Быстрый старт
 
-Use this guide to test the vault method in 5-10 minutes.
+Этот файл помогает проверить методологию хранилища за 5-10 минут.
 
-## 1. Make A Safe Copy
+Англоязычная версия живёт в отдельном репозитории: [markdown-agent-vault](https://github.com/dzhokhov/markdown-agent-vault).
 
-Use this repository as a GitHub template or clone it into a test folder.
+## 1. Сделай безопасную копию
 
-Do not start with your real knowledge base. First learn the workflow on a small copy.
+Используй этот репозиторий как GitHub-шаблон или склонируй его в тестовую папку.
 
-## 2. Open The Folder In An Agent
+Не начинай с реального хранилища. Сначала проверь рабочий цикл на маленькой копии.
 
-Open the repository root in your file-aware AI assistant.
+## 2. Открой папку в агенте
 
-Send this prompt:
+Открой корень репозитория в агенте, который умеет работать с файлами.
+
+Отправь запрос:
 
 ```text
-Open this folder as my working vault. First read AGENTS.en.md, START_HERE.en.md, QUICKSTART.md, and ONBOARDING.en.md. Explain the folder structure in plain language. Then help me run one safe test: route a small note from 00_inbox/ into a new project, update links, and write a log entry.
+Открой эту папку как рабочее хранилище. Сначала прочитай AGENTS.md, START_HERE.md, QUICKSTART.md и ONBOARDING.md. Объясни структуру папок простыми словами. Затем помоги провести один безопасный тест: разобрать маленькую заметку из 00_inbox/, создать учебный проект, обновить ссылки и записать событие в журнал.
 ```
 
-The agent should read the rules before editing files.
+Агент должен прочитать правила до изменения файлов.
 
-For Russian, use `AGENTS.md`, `START_HERE.md`, and `ONBOARDING.md`.
+## 3. Добавь один тестовый файл
 
-## 3. Add One Test Input
-
-Create a small Markdown file in `00_inbox/`, for example:
+Создай небольшой Markdown-файл в `00_inbox/`, например:
 
 ```markdown
-# Test note
+# Тестовая заметка
 
-I want to test whether an AI agent can turn an unsorted note into a small project with state files.
+Я хочу проверить, сможет ли AI-агент превратить неразобранную заметку в маленький проект с файлами состояния.
 ```
 
-Then ask:
+Затем попроси:
 
 ```text
-Route the test note from 00_inbox/ into a new learning project. Before editing, tell me which files you will create or update. After editing, show me the project README, plan, tasks, context, and log files.
+Разбери тестовую заметку из 00_inbox/ в новый учебный проект. Перед изменениями скажи, какие файлы создашь или обновишь. После изменений покажи README, plan, tasks, context и log проекта.
 ```
 
-## 4. Check The Result
+## 4. Проверь результат
 
-A good first result usually creates or updates:
+Хороший первый результат обычно создаёт или обновляет:
 
-- a project folder under `01_now/projects/`;
-- `README.md` for navigation;
-- `plan.md` for goal, boundaries, milestones, and blockers;
-- `tasks.md` for the current execution queue;
-- `context.md` for stable project knowledge;
-- `log.md` for short event history;
-- relevant folder indexes.
+- папку проекта в `01_now/projects/`;
+- `README.md` для навигации;
+- `plan.md` для цели, границ, вех и блокеров;
+- `tasks.md` для текущей очереди исполнения;
+- `context.md` для устойчивого знания проекта;
+- `log.md` для короткой истории событий;
+- нужные индексы папок.
 
-Compare your result with [examples/first-session/](./examples/first-session/README.md).
+Сравни результат с [examples/first-session/](./examples/first-session/README.md).
 
-## 5. Validate Links
+## 5. Проверь ссылки
 
-From the repository root:
+Из корня репозитория:
 
 ```bash
 python3 scripts/check_links.py
 python3 scripts/inventory.py
 ```
 
-If you changed public package files, also run:
+Если менялись публичные файлы комплекта, запусти также:
 
 ```bash
 python3 scripts/check_forbidden_markers.py
 ```
 
-## 6. Continue In A New Session
+## 6. Продолжи в новой сессии
 
-Open a new chat and ask:
+Открой новый чат и попроси:
 
 ```text
-Continue the project from the vault files. First read AGENTS.en.md and then find the active project through 01_now/README.md. Explain the current state before doing any edits.
+Продолжи проект по файлам хранилища. Сначала прочитай AGENTS.md, затем найди активный проект через 01_now/README.md. Объясни текущее состояние перед любыми изменениями.
 ```
 
-The test succeeds when the agent can resume from files instead of needing the old chat history.
+Тест успешен, если агент может продолжить работу из файлов, а не из истории старого чата.

@@ -14,7 +14,6 @@ FORBIDDEN_PATTERNS = [
     r"GDrive",
     r"obd_pers",
     r"johov",
-    r"dzhokhov",
     r"Жохов",
     r"Дмитр",
     r"click\.ru",

@@ -1,144 +1,126 @@
-# Vault Methodology Starter Pack
+---
+id: vault-methodology-starter-pack-readme
+type: index
+status: active
+created: 2026-04-30
+updated: 2026-05-02
+aliases:
+  - "Стартовый комплект методологии хранилища"
+tags: [vault, methodology, starter-pack, russian]
+source_path: "README.md"
+---
 
-Stop starting every AI session from zero.
+# Стартовый комплект методологии хранилища
 
-This repository is an open-source starter kit for an agent-ready Markdown vault. It gives you a folder structure, `AGENTS.md`, project templates, routing rules, skills, logs, and small validation scripts so work with an AI agent can live in files instead of only in chat history.
+## Суть
 
-Use it when you want an agent to open a folder, understand the current state, place new material in the right home, update links, and continue the same project in a later session.
+Это русскоязычная версия стартового комплекта для человека, который хочет вести файловое хранилище вместе с AI-агентом: с правилами, структурой папок, шаблонами, скиллами, журналами и проверками.
 
-## Languages
+Англоязычная версия живёт отдельно: [dzhokhov/markdown-agent-vault](https://github.com/dzhokhov/markdown-agent-vault). Это не зеркало и не дословный перевод: версии могут расходиться под разные аудитории и культурные практики работы со знаниями.
 
-The public overview is in English. Core first-run documents are available in both English and Russian:
+## Что решает
 
-| English | Russian |
-|---|---|
-| [`AGENTS.en.md`](./AGENTS.en.md) | [`AGENTS.md`](./AGENTS.md) |
-| [`START_HERE.en.md`](./START_HERE.en.md) | [`START_HERE.md`](./START_HERE.md) |
-| [`ONBOARDING.en.md`](./ONBOARDING.en.md) | [`ONBOARDING.md`](./ONBOARDING.md) |
+Обычная AI-сессия часто заканчивается тем, что:
 
-## What Problem It Solves
+- контекст остаётся в чате;
+- файлы загружены, пересказаны и забыты;
+- следующую сессию приходится вводить в курс заново;
+- решения, задачи, знания и исходники расходятся по разным местам.
 
-Most AI work starts clean and ends messy:
+Этот комплект делает файловую систему устойчивым слоем состояния:
 
-- context stays in the chat, not in the workspace;
-- files are uploaded, summarized, and then forgotten;
-- the next session needs the same explanation again;
-- project state, decisions, tasks, and reusable knowledge drift apart.
+- `AGENTS.md` объясняет агенту правила работы в хранилище;
+- `00_inbox/` принимает новые и неразобранные материалы;
+- `01_now/` хранит активные проекты и текущую работу;
+- `03_knowledge/` хранит переиспользуемые знания;
+- `log.md`, `plan.md`, `tasks.md` и `context.md` помогают новой сессии продолжить работу без догадок.
 
-This starter pack makes the file system the durable state layer:
+## Кому полезно
 
-- `AGENTS.md` tells the agent how to behave in this vault;
-- `00_inbox/` holds new material before it is routed;
-- `01_now/` holds active projects and current work;
-- `03_knowledge/` holds reusable knowledge;
-- `log.md`, `plan.md`, `tasks.md`, and `context.md` let a future agent resume work without guessing.
+Комплект полезен, если ты:
 
-## Who This Is For
+- работаешь с агентами, которые умеют читать и менять локальные файлы;
+- ведёшь заметки в Markdown или Obsidian;
+- хочешь, чтобы состояние проекта переживало отдельные чаты;
+- хочешь понятный порядок для входящих материалов, задач, решений и знаний;
+- предпочитаешь обычные файлы, а не закрытую «память» внутри сервиса.
 
-This is useful if you:
+Это не:
 
-- use coding or research agents with local files;
-- keep notes in Markdown or Obsidian;
-- want project state to survive between AI sessions;
-- need a repeatable way to route files, decisions, tasks, and reusable knowledge;
-- prefer plain files over a hosted memory product.
+- SaaS-приложение;
+- Obsidian-плагин;
+- магическая память;
+- замена трекера задач;
+- универсальная методология для всех людей и культур.
 
-This is probably not for you if you want:
+## Первый запуск
 
-- a hosted app;
-- an Obsidian plugin;
-- automatic semantic memory;
-- a task tracker replacement;
-- a finished product with broad compatibility guarantees.
-
-## First 10 Minutes
-
-1. Use this repository as a template or clone it into a safe test folder.
-2. Open the folder in your AI coding agent or local assistant.
-3. Ask the agent:
+1. Склонируй репозиторий или используй его как шаблон в безопасной тестовой папке.
+2. Открой папку в агенте, который умеет работать с файлами.
+3. Скажи агенту:
 
    ```text
-   Open this folder as my working vault. First read AGENTS.en.md, START_HERE.en.md, QUICKSTART.md, and ONBOARDING.en.md. Explain the folder structure, then walk me through one safe test project using a small file in 00_inbox/.
+   Открой эту папку как рабочее хранилище. Сначала прочитай AGENTS.md, START_HERE.md, QUICKSTART.md и ONBOARDING.md. Объясни структуру папок, главные правила и проведи меня через один безопасный тестовый проект с маленьким файлом в 00_inbox/.
    ```
 
-4. Put a small test note into `00_inbox/`.
-5. Ask the agent to route it into a project, update links, and write a short log entry.
-6. Open `examples/first-session/` to see what a finished first cycle looks like.
+4. Положи небольшой тестовый файл в `00_inbox/`.
+5. Попроси агента создать учебный проект, обновить ссылки и записать событие в журнал.
+6. Сравни результат с примером [examples/first-session](./examples/first-session/README.md).
 
-For a practical walkthrough, see [QUICKSTART.md](./QUICKSTART.md).
+## Навигация
 
-## What Is Inside
-
-| Path | Role |
+| Путь | Назначение |
 |---|---|
-| [`AGENTS.en.md`](./AGENTS.en.md) / [`AGENTS.md`](./AGENTS.md) | Operating rules for agents working inside the vault |
-| [`START_HERE.en.md`](./START_HERE.en.md) / [`START_HERE.md`](./START_HERE.md) | Short entry point for the first session |
-| [`ONBOARDING.en.md`](./ONBOARDING.en.md) / [`ONBOARDING.md`](./ONBOARDING.md) | Full onboarding guide |
-| [`QUICKSTART.md`](./QUICKSTART.md) | 5-10 minute practical start |
-| [`00_inbox/`](./00_inbox/README.md) | New, unsorted material |
-| [`01_now/`](./01_now/README.md) | Active projects and current work |
-| [`02_domains/`](./02_domains/README.md) | Long-lived areas of life or work |
-| [`03_knowledge/`](./03_knowledge/README.md) | Reusable knowledge and methods |
-| [`04_logs/`](./04_logs/README.md) | Timeline, reviews, and decision logs |
-| [`90_archive/`](./90_archive/README.md) | Completed or obsolete material |
-| [`meta/`](./meta/README.md) | Rules, indexes, and templates |
-| [`skills/`](./skills/README.md) | Reusable instructions for recurring task types |
-| [`scripts/`](./scripts/README.md) | Local validation scripts |
-| [`examples/first-session/`](./examples/first-session/README.md) | Minimal example of one routed file becoming a project |
+| [AGENTS.md](./AGENTS.md) | Правила работы агента внутри хранилища |
+| [START_HERE.md](./START_HERE.md) | Короткий вход для первой сессии |
+| [ONBOARDING.md](./ONBOARDING.md) | Подробный онбординг |
+| [QUICKSTART.md](./QUICKSTART.md) | Быстрый практический старт |
+| [00_inbox/](./00_inbox/README.md) | Новые и неразобранные материалы |
+| [01_now/](./01_now/README.md) | Активные проекты и текущая работа |
+| [02_domains/](./02_domains/README.md) | Долгоживущие области жизни или работы |
+| [03_knowledge/](./03_knowledge/README.md) | Переиспользуемые знания и методологии |
+| [04_logs/](./04_logs/README.md) | Хронология, обзоры и журналы решений |
+| [90_archive/](./90_archive/README.md) | Завершённое и устаревшее |
+| [meta/](./meta/README.md) | Правила, шаблоны и служебные индексы |
+| [skills/](./skills/README.md) | Скиллы для повторяющихся типов задач |
+| [scripts/](./scripts/README.md) | Локальные проверки |
+| [examples/first-session/](./examples/first-session/README.md) | Минимальный пример первого цикла |
 
-## How It Differs
+## Чем отличается
 
-| Alternative | What it gives you | How this differs |
+| Альтернатива | Что даёт | Чем отличается этот комплект |
 |---|---|---|
-| A single `AGENTS.md` | Behavior rules for the agent | This adds a full file architecture: inbox, active projects, knowledge, logs, templates, skills, and routing rules |
-| Basic Memory style tools | A memory layer for notes and recall | This is a plain-file operating method for project state, decisions, tasks, and source material |
-| Cline Memory Bank | Project memory files for coding work | This generalizes the idea to a whole Markdown vault, including non-code projects, inbox routing, knowledge extraction, and logs |
-| Obsidian plugins | UI features, backlinks, or automation inside Obsidian | This does not require a plugin. It is a folder convention and agent workflow that can be opened by any file-aware assistant |
-| A normal Obsidian vault | Notes and links for a human | This adds explicit agent rules, project state files, lifecycle rules, skills, and checks so an AI session can work safely with the vault |
+| Один `AGENTS.md` | Правила поведения агента | Здесь есть вся файловая архитектура: входящие, проекты, знания, журналы, шаблоны, скиллы и маршрутизация |
+| Basic Memory и похожие инструменты | Слой памяти и поиска по заметкам | Здесь фокус на файловом состоянии проектов, решениях, задачах и исходниках |
+| Cline Memory Bank | Проектные файлы памяти для разработки | Здесь подход шире: не только код, но и исследования, встречи, знания, входящие материалы и журналы |
+| Obsidian-плагины | Интерфейсные функции и автоматизация внутри Obsidian | Это не плагин, а файловая конвенция и рабочий порядок для агента |
+| Обычное Obsidian-хранилище | Заметки и ссылки для человека | Здесь добавлены правила для агента, проектные state-файлы, жизненный цикл и проверки |
 
-## Maturity
+## Зрелость
 
-Current status: early public starter pack.
+Статус: ранний русскоязычный стартовый комплект.
 
-What is ready:
+Готово:
 
-- portable folder structure;
-- agent rules;
-- project templates;
-- routing rules;
-- onboarding guide;
-- reusable skills;
-- local validation scripts;
-- first minimal example.
+- переносимая структура папок;
+- правила агента;
+- шаблоны проектов;
+- маршрутизация материалов;
+- онбординг;
+- скиллы;
+- локальные проверки;
+- минимальный пример первого цикла.
 
-What is not ready yet:
+Пока не готово:
 
-- broad tool-specific setup guides;
-- external user examples;
-- compatibility claims for every agent tool;
-- polished automation around releases and checks.
+- широкие инструкции под все агентские инструменты;
+- внешние пользовательские примеры;
+- стабильная совместимость с любым агентом;
+- зрелая публичная модель вкладов.
 
-## Repository Topics
+## Проверка
 
-Recommended GitHub topics:
-
-```text
-ai-agents
-second-brain
-obsidian
-markdown
-knowledge-management
-agent-skills
-agentsmd
-starter-kit
-pkm
-```
-
-Do not add tool-specific topics such as `claude-code`, `cursor`, `codex`, or `mcp` until this repository includes tested setup notes for those tools.
-
-## Validate The Pack
-
-From the repository root:
+Из корня репозитория:
 
 ```bash
 python3 scripts/inventory.py
@@ -146,20 +128,6 @@ python3 scripts/check_links.py
 python3 scripts/check_forbidden_markers.py
 ```
 
-These checks are intentionally small. They help catch broken Markdown links and private markers before a release.
+## Лицензия
 
-## Contributing
-
-Contributions are welcome, especially:
-
-- clearer first-run instructions;
-- minimal examples from real workflows;
-- compatibility notes for specific tools;
-- safer routing rules;
-- template improvements.
-
-Start with [CONTRIBUTING.md](./CONTRIBUTING.md), [SUPPORT.md](./SUPPORT.md), and [ROADMAP.md](./ROADMAP.md).
-
-## License
-
-MIT. See [LICENSE](./LICENSE).
+MIT. См. [LICENSE](./LICENSE).

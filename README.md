@@ -6,6 +6,16 @@ This repository is an open-source starter kit for an agent-ready Markdown vault.
 
 Use it when you want an agent to open a folder, understand the current state, place new material in the right home, update links, and continue the same project in a later session.
 
+## Languages
+
+The public overview is in English. Core first-run documents are available in both English and Russian:
+
+| English | Russian |
+|---|---|
+| [`AGENTS.en.md`](./AGENTS.en.md) | [`AGENTS.md`](./AGENTS.md) |
+| [`START_HERE.en.md`](./START_HERE.en.md) | [`START_HERE.md`](./START_HERE.md) |
+| [`ONBOARDING.en.md`](./ONBOARDING.en.md) | [`ONBOARDING.md`](./ONBOARDING.md) |
+
 ## What Problem It Solves
 
 Most AI work starts clean and ends messy:
@@ -48,7 +58,7 @@ This is probably not for you if you want:
 3. Ask the agent:
 
    ```text
-   Open this folder as my working vault. First read AGENTS.md, START_HERE.md, and QUICKSTART.md. Explain the folder structure, then walk me through one safe test project using a small file in 00_inbox/.
+   Open this folder as my working vault. First read AGENTS.en.md, START_HERE.en.md, QUICKSTART.md, and ONBOARDING.en.md. Explain the folder structure, then walk me through one safe test project using a small file in 00_inbox/.
    ```
 
 4. Put a small test note into `00_inbox/`.
@@ -61,9 +71,9 @@ For a practical walkthrough, see [QUICKSTART.md](./QUICKSTART.md).
 
 | Path | Role |
 |---|---|
-| [`AGENTS.md`](./AGENTS.md) | Operating rules for agents working inside the vault |
-| [`START_HERE.md`](./START_HERE.md) | Short entry point for the first session |
-| [`ONBOARDING.md`](./ONBOARDING.md) | Full onboarding guide |
+| [`AGENTS.en.md`](./AGENTS.en.md) / [`AGENTS.md`](./AGENTS.md) | Operating rules for agents working inside the vault |
+| [`START_HERE.en.md`](./START_HERE.en.md) / [`START_HERE.md`](./START_HERE.md) | Short entry point for the first session |
+| [`ONBOARDING.en.md`](./ONBOARDING.en.md) / [`ONBOARDING.md`](./ONBOARDING.md) | Full onboarding guide |
 | [`QUICKSTART.md`](./QUICKSTART.md) | 5-10 minute practical start |
 | [`00_inbox/`](./00_inbox/README.md) | New, unsorted material |
 | [`01_now/`](./01_now/README.md) | Active projects and current work |

@@ -4,6 +4,17 @@ All notable public changes are tracked here.
 
 This project uses early semantic versions. Until `v1.0.0`, breaking changes to structure or rules may happen when they make the starter pack clearer or safer.
 
+## [v0.1.1] - 2026-05-02
+
+### Added
+
+- English versions of the core first-run documents: `AGENTS.en.md`, `START_HERE.en.md`, and `ONBOARDING.en.md`.
+- Language navigation in `README.md`.
+
+### Changed
+
+- `QUICKSTART.md` now points English-speaking users to the English first-run files while preserving the Russian originals.
+
 ## [v0.1.0] - 2026-05-02
 
 First public starter-pack release.

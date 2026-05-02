@@ -15,10 +15,12 @@ Open the repository root in your file-aware AI assistant.
 Send this prompt:
 
 ```text
-Open this folder as my working vault. First read AGENTS.md, START_HERE.md, and QUICKSTART.md. Explain the folder structure in plain language. Then help me run one safe test: route a small note from 00_inbox/ into a new project, update links, and write a log entry.
+Open this folder as my working vault. First read AGENTS.en.md, START_HERE.en.md, QUICKSTART.md, and ONBOARDING.en.md. Explain the folder structure in plain language. Then help me run one safe test: route a small note from 00_inbox/ into a new project, update links, and write a log entry.
 ```
 
 The agent should read the rules before editing files.
+
+For Russian, use `AGENTS.md`, `START_HERE.md`, and `ONBOARDING.md`.
 
 ## 3. Add One Test Input
 
@@ -70,7 +72,7 @@ python3 scripts/check_forbidden_markers.py
 Open a new chat and ask:
 
 ```text
-Continue the project from the vault files. First read AGENTS.md and then find the active project through 01_now/README.md. Explain the current state before doing any edits.
+Continue the project from the vault files. First read AGENTS.en.md and then find the active project through 01_now/README.md. Explain the current state before doing any edits.
 ```
 
 The test succeeds when the agent can resume from files instead of needing the old chat history.

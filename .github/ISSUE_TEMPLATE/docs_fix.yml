@@ -1,0 +1,24 @@
+name: Documentation fix
+description: Report unclear wording, missing links, or quickstart confusion.
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: File or section
+      placeholder: README.md, QUICKSTART.md, ONBOARDING.md, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is unclear?
+    validations:
+      required: true
+  - type: textarea
+    id: suggested
+    attributes:
+      label: Suggested improvement
+    validations:
+      required: false

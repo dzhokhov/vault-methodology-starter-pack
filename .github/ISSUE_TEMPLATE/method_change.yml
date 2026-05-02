@@ -1,0 +1,32 @@
+name: Method change
+description: Propose a change to rules, routing, templates, or skills.
+title: "[Method]: "
+labels: ["method"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What does the current method make hard or unsafe?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: affected
+    attributes:
+      label: Affected files
+      description: Which rules, templates, examples, or docs should change?
+    validations:
+      required: false
+  - type: textarea
+    id: verification
+    attributes:
+      label: How to verify
+      description: How can a new user tell the change works?
+    validations:
+      required: false

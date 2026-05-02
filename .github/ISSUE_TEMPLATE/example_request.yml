@@ -1,0 +1,25 @@
+name: Example request
+description: Suggest a minimal example workflow that would make the starter pack easier to understand.
+title: "[Example]: "
+labels: ["example"]
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: What workflow should the example demonstrate?
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Expected files
+      description: Which files should the example include?
+    validations:
+      required: false
+  - type: textarea
+    id: user
+    attributes:
+      label: Who would use this?
+    validations:
+      required: false

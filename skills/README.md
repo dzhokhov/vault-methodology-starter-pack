@@ -26,7 +26,6 @@ source_path: "skills/README.md"
 - [release-rollback](./release-rollback/SKILL.md) — релизная готовность и безопасный rollback.
 - [meeting-processing](./meeting-processing/SKILL.md) — обработка встреч, извлечение решений/действий, маршрутизация в контур.
 - [research](./research/SKILL.md) — source-first ресёрч с компенсацией искажений и обязательной фиксацией результата.
-- [ilyakhov-editor](./ilyakhov-editor/SKILL.md) — редактура в инфостиле.
 - [landing-copywriter](./landing-copywriter/SKILL.md) — создание Hero-блоков и первого экрана лендинга.
 - [personal-brand-content](./personal-brand-content/SKILL.md) — экспертный контент для личного бренда или авторского канала.
 - [slide-copywriter](./slide-copywriter/SKILL.md) — контент для слайдов и презентаций.

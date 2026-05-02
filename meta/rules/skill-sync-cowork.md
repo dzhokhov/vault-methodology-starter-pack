@@ -47,7 +47,7 @@ Vault (`skills/`) — единственный source of truth для касто
 
 Скиллы, синхронизируемые в Cowork через `rsync`-копии в `skills-plugin`:
 
-meeting-processing, research, parking, resume, ilyakhov-editor, landing-copywriter, meta-ads-bulk, meta-ads-campaign-builder, meta-ads-campaign-structure, meta-ads-creative, meta-ads-creative-factory, meta-ads-optimizer, meta-ads-preflight, meta-ads-reporter, meta-ads-transport-api, meta-ads-transport-human, meta-ads-transport-ui.
+meeting-processing, research, parking, resume, landing-copywriter, meta-ads-bulk, meta-ads-campaign-builder, meta-ads-campaign-structure, meta-ads-creative, meta-ads-creative-factory, meta-ads-optimizer, meta-ads-preflight, meta-ads-reporter, meta-ads-transport-api, meta-ads-transport-human, meta-ads-transport-ui.
 
 Полный список и логика исключений: `03_knowledge/cowork-skill-sync-research.md`.
 

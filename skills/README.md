@@ -3,7 +3,7 @@ id: skills-index
 type: note
 status: active
 created: 2026-03-20
-updated: 2026-05-01
+updated: 2026-05-04
 aliases:
   - "Индекс скиллов"
   - "Кастомные скиллы vault"
@@ -41,6 +41,10 @@ source_path: "skills/README.md"
 - [case-forensics](./case-forensics/SKILL.md) — извлечение воспроизводимых кейсов из тредов и чатов.
 - [event-intelligence](./event-intelligence/SKILL.md) — мониторинг и ранжирование AI-мероприятий (`Attend/Speak`).
 - [network-analytics](./network-analytics/SKILL.md) — обновление графа связей и приоритизация outreach.
+
+### Синхронизация Claude Cowork
+
+- [sync-cowork-skills.sh](./sync-cowork-skills.sh) — синхронизация скиллов из этой папки в места, откуда их видит Claude Cowork.
 
 ## Следующий шаг
 Подключать соответствующие скиллы явно в prompt автоматизаций через формат `[$skill-name](./abs-path-to-SKILL.md)` для детерминированного исполнения pipeline.

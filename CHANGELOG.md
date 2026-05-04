@@ -4,6 +4,14 @@ All notable public changes are tracked here.
 
 This project uses early semantic versions. Until `v1.0.0`, breaking changes to structure or rules may happen when they make the starter pack clearer or safer.
 
+## Unreleased
+
+### Added
+
+- Added installation guidance and a compatibility table for common file-capable agents.
+- Added Claude Cowork notes and the bundled `skills/sync-cowork-skills.sh` synchronization script.
+- Added Google Antigravity to the agent list with its agent-management mode.
+
 ## [v0.1.3] - 2026-05-02
 
 ### Removed

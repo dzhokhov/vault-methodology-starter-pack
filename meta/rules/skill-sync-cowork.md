@@ -3,7 +3,7 @@ id: skill-sync-cowork
 type: rules
 status: active
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-05-04
 aliases:
   - "Синхронизация скиллов Cowork"
   - "Правило синхронизации скиллов"
@@ -20,7 +20,7 @@ globs: "skills/**"
 
 ## Суть
 
-Vault (`skills/`) — единственный source of truth для кастомных скиллов. Cowork может держать две копии: персональные скиллы в `~/.claude/skills/` и активный кэш Claude Desktop `~/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/.../skills/`. После редактирования скилла в vault нужно убедиться, что `~/.claude/skills/` указывает на vault через symlinks, а `skills-plugin` содержит свежие физические копии через `rsync`.
+Vault (`skills/`) — единственный source of truth для кастомных скиллов. Cowork может держать две копии: персональные скиллы в `~/.claude/skills/` и активный кэш Claude Desktop `~/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/.../skills/`. После редактирования скилла в vault нужно убедиться, что `~/.claude/skills/` указывает на vault через symlinks, а `skills-plugin` содержит свежие физические копии через `rsync`. Скрипт синхронизации входит в комплект поставки: [sync-cowork-skills.sh](../../skills/sync-cowork-skills.sh).
 
 ## Что делать агенту
 
@@ -47,12 +47,16 @@ Vault (`skills/`) — единственный source of truth для касто
 
 Скиллы, синхронизируемые в Cowork через `rsync`-копии в `skills-plugin`:
 
-meeting-processing, research, parking, resume, landing-copywriter, meta-ads-bulk, meta-ads-campaign-builder, meta-ads-campaign-structure, meta-ads-creative, meta-ads-creative-factory, meta-ads-optimizer, meta-ads-preflight, meta-ads-reporter, meta-ads-transport-api, meta-ads-transport-human, meta-ads-transport-ui.
+По умолчанию скрипт берёт все скиллы из `skills/*/SKILL.md`. Для ограничения списка используй переменную окружения:
 
-Полный список и логика исключений: `03_knowledge/cowork-skill-sync-research.md`.
+```bash
+COWORK_SKILLS="research parking resume" ./skills/sync-cowork-skills.sh
+```
+
+В публичном комплекте не должно быть ссылок на приватные скиллы, которых нет в текущей папке `skills/`.
 
 ## Чего НЕ делать
 
 - Не редактировать скиллы в `~/.claude/skills/` или `skills-plugin` напрямую — все правки через vault
 - Не копировать скиллы вручную — только `rsync` через скрипт
-- Не добавлять в include-list скиллы, требующие CLI-only инструментов (git, make) — в Cowork они бесполезны
+- Не добавлять в include-list скиллы, требующие инструментов только для терминала (`git`, `make`) — в Cowork они бесполезны
